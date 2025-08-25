@@ -1,3 +1,4 @@
+import {Footer} from "@/components/globalnav/Footer";
 
 export default function RootLayout({
   children,
@@ -6,7 +7,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }
