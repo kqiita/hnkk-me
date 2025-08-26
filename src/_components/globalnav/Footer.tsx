@@ -1,5 +1,5 @@
 import React from "react"
-export function Footer(){
+export default function Footer(){
     return (
         <div>
             <p>&copy; 2025 kqiita</p>
