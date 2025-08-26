@@ -7,10 +7,7 @@ export default function Header({children,}:{children:React.ReactNode}){
             <div>
             <Image src={ImgSyahuneko} alt="syahuneko" width={128} height={128} />                
             </div>
-            <div>
-                <h1>はんかくくんのページ</h1>
-            </div>
             {children}
-        </div>       
+        </div>
     );
 }
