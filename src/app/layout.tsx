@@ -1,7 +1,5 @@
-import Footer from "@/_components/globalnav/Footer";
-import Header from "@/_components/globalnav/Header";
-import Sidebar from "@/_components/globalnav/Sidebar";
 import List,{ListItem} from "@/_components/ui/List";
+import '~/global.css'
 
 export default function RootLayout({
   children,
@@ -11,17 +9,19 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body>
-        <Header>
-          <div></div>
-        </Header>
-        <Sidebar>
+        <div id="header">
+
+        </div>
+        <div id="sidebar">
           <List>
             <ListItem id="about">about</ListItem>
             <ListItem id="blog">blog</ListItem>
           </List>
-        </Sidebar>
+        </div>        
         <main>{children}</main>
-        <Footer />
+        <div id="footer">
+          <p>&copy; 2025 kqiita</p>
+        </div>
       </body>
     </html>
   )
