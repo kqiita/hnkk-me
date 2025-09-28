@@ -2,9 +2,9 @@ import React from "react";
 
 export default function List({children}:{children : React.ReactNode}){
     return(
-        <ul>
+        <div>
             {children}
-        </ul>
+        </div>
     )
 }
 export function ListItem({
@@ -15,8 +15,8 @@ export function ListItem({
     children:React.ReactNode
 }){
     return(
-        <li key={id}>
+        <div key={id}>
             {children}
-        </li>
+        </div>
     )
 }
