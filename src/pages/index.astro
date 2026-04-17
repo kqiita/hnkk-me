@@ -1,17 +1,17 @@
 ---
-// Astroにようこそ！この3つのハイフンのコードフェンスの中にあるものは、
-// 「コンポーネントのフロントマター」です。ブラウザで実行されることはありません。
-console.log('ここはブラウザではなく、ターミナルで実行されます！');
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
 ---
-<!-- 以下は「コンポーネントテンプレート」です。単なるHTMLですが、
-    素晴らしいテンプレートを作成するための魔法が散りばめられています。 -->
-<html>
-  <body>
-    <h1>Hello, World!</h1>
-  </body>
+<!-- Home -->
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>hnkkme Home</title>
+    </head>
+    <body>
+        <Header></Header>
+        <div></div>
+        <Footer></Footer>
+    </body>
 </html>
-<style>
-  h1 {
-    color: orange;
-  }
-</style>
+<style></style>
