@@ -6,7 +6,7 @@ import Basiclayout from "../../layouts/basiclayout.astro";
 const posts = await getCollection('blog');
 console.log(posts);
 ---
-<Basiclayout title="blog home" description="blog home - Here you can view a list of the blog posts I've written" publishDate={new Date("2026-04-18T17:18")}>
+<Basiclayout title="blog home" description="blog home - Here you can view a list of the blog posts I've written" pubDate={new Date("2026-04-18T17:18")}>
     <div>
         {posts.map(post => (
             <div><a href={`/blog/${post.id}`}>{post.data.title}</a></div>

@@ -5,10 +5,10 @@ import Footer from '../components/Footer.astro'
 interface Props {
     title: string,
     description?: string,
-    publishDate: Date,
-    republishDate?: Date,
+    pubDate: Date,
+    updDate?: Date,
 }
-const {title, description, publishDate, republishDate} = Astro.props;
+const {title, description, pubDate, updDate} = Astro.props;
 ---
 <!-- Home -->
 <html lang="ja">
@@ -24,7 +24,7 @@ const {title, description, publishDate, republishDate} = Astro.props;
             <slot />
         </div>
         <div>
-            <p>公開日 {publishDate.toLocaleDateString()}</p>
+            <p>公開日 {pubDate.toLocaleDateString()}</p>
         </div>
         <Footer></Footer>
     </body>

@@ -12,7 +12,7 @@
       "type": "string",
       "format": "date-time"
     },
-    "updatedDate": {
+    "updDate": {
       "type": "string",
       "format": "date-time"
     },
