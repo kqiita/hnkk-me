@@ -1,26 +1,15 @@
 ---
 import { getCollection } from "astro:content";
 
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
+import Basiclayout from "../../layouts/basiclayout.astro";
 
 const posts = await getCollection('blog');
 console.log(posts);
 ---
-<html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <title>hnkkme Home</title>
-    </head>
-    <body>
-        <Header></Header>
-        <div>
-            <div>
-                {posts.map(post => (
-                    <div><a href={`/blog/${post.id}`}>{post.data.title}</a></div>
-                ))}
-            </div>
-        </div>
-        <Footer></Footer>
-    </body>
-</html>
+<Basiclayout>
+    <div>
+        {posts.map(post => (
+            <div><a href={`/blog/${post.id}`}>{post.data.title}</a></div>
+        ))}
+    </div>
+</Basiclayout>
