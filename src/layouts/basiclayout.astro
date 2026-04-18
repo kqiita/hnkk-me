@@ -1,17 +1,30 @@
 ---
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
+
+interface Props {
+    title: string,
+    description?: string,
+    publishDate: Date,
+    republishDate?: Date,
+}
+const {title, description, publishDate, republishDate} = Astro.props;
 ---
 <!-- Home -->
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <title>hnkkme Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content={description}>
+        <title>{title}</title>
     </head>
     <body>
         <Header></Header>
         <div>
             <slot />
+        </div>
+        <div>
+            <p>公開日 {publishDate.toLocaleDateString()}</p>
         </div>
         <Footer></Footer>
     </body>
