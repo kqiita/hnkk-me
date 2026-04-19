@@ -5,7 +5,7 @@ import Footer from '../components/Footer.astro'
 interface Props {
     title: string,
     description?: string,
-    pubDate: Date,
+    pubDate?: Date,
     updDate?: Date,
 }
 const {title, description, pubDate, updDate} = Astro.props;
@@ -24,7 +24,9 @@ const {title, description, pubDate, updDate} = Astro.props;
             <slot />
         </div>
         <div>
+        {pubDate && (
             <p>公開日 {pubDate.toLocaleDateString()}</p>
+        )}
         </div>
         <Footer></Footer>
     </body>
