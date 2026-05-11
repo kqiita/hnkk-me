@@ -38,4 +38,4 @@ console.log("hello")
 /* comment */
 ```
 
-![hnkk.me](../../../public/img/syahuneko-ver1-r225g234b205.png)
+![hnkk.me](/public/img/syahuneko-ver1-r225g234b205.png)
