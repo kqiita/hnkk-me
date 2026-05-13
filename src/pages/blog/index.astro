@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 
 import Basiclayout from "@/layouts/basiclayout.astro";
 
-const posts = await getCollection('blog');
+const posts = await getCollection('blog',({ data })=> !data.draft);
 ---
 <Basiclayout title="blog home" description="blog home - Here you can view a list of the blog posts I've written" pubDate={new Date("2026-04-18T17:18")}>
     <div>

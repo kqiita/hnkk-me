@@ -16,6 +16,9 @@
       "type": "string",
       "format": "date-time"
     },
+    "draft": {
+      "type": "boolean"
+    },
     "$schema": {
       "type": "string"
     }
@@ -23,6 +26,7 @@
   "required": [
     "title",
     "description",
-    "pubDate"
+    "pubDate",
+    "draft"
   ]
 }

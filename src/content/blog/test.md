@@ -3,6 +3,7 @@ title: "テスト記事"
 description: "test"
 pubDate: "2026-04-17"
 updDate: "2026-05-01"
+draft: true
 ---
 
 # 目次
