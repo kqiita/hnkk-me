@@ -26,9 +26,11 @@ draft: true
 > hype
 >
 
+::span{}::
 :::box{type="info"}
 info box
 :::
+::image{src="/img/syahuneko.min.png" title="syahuneko.min" description="syahuneko.min" width="300px" height="300px"}
 
 ::card{url="https://hnkk.me" title="hnkk-me" description="this is hnkk" image="/img/syahuneko-ver1-r225g234b205.png"}
 
@@ -39,4 +41,4 @@ console.log("hello")
 /* comment */
 ```
 
-![hnkk.me](/public/img/syahuneko-ver1-r225g234b205.png)
+![hnkk.me](/img/syahuneko-ver1-r225g234b205.png)

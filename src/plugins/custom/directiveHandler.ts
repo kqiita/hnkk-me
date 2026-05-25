@@ -20,13 +20,13 @@ export default function directiveHandler() {
         } else if(node.name == "card") {
           const data = node.data || (node.data = {});
           const { url, title, description, image} = node.attributes || {};
-          data.hName = "a"
+          data.hName = "a";
           data.hProperties = {
             href: url,
             className: ["linkcard"],
             target: "_blank",
             rel: "noopener noreferrer",
-          }
+          };
           data.hChildren = [
             ...(image ? [h("img.linkcard-img", { src: image })] : []),
             h("div.linkcard-content", [
@@ -34,6 +34,19 @@ export default function directiveHandler() {
               h("div.linkcard-desc", description || ""),
             ])
           ];
+        } else if(node.name == "image"){
+          const data  = node.data || (node.data = {});
+          const {src, title, description, width, height} = node.attributes || {};
+          data.hName = "div";
+          data.hProperties = {
+            id: "div-img-"+title,
+            className: ["div-image"],
+          }
+          data.hChildren = [
+            h("img.image-img", {src: src, alt: description, width: width , height: height} ),
+            h("p.image-title",title),
+            h("p.image-desc",description),
+          ]
         } else {
           //const data = node.data || (node.data = {});
           //const hast = h(node.name, node.attributes || {});
