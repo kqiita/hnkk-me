@@ -1,2 +1,10 @@
 node_modules
-.astro
+.astro/
+dist/
+temp/ 
+*.log
+package-lock.json
+
+*.env
+
+.wrangler/

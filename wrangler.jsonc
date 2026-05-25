@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // Top-level configuration
+  "name": "hnkkme-worker",
+  // Set this to today's date
+  "compatibility_date": "2026-05-25",
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page",
+  },
+  "observability": {
+    "enabled": true
+  }
+}
