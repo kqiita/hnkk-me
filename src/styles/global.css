@@ -1,5 +1,88 @@
-:root{
-    --main-color: #e1eacd ;
-    --main-bg-color: #f9ffec ;
+:root {
+    --main-color: #e1eacd;
+    --sub-color: #eaf1de;
+    --main-bg-color: #f9ffec;
+    --sub-bg-color: #d1dabd;
+    --light-main-bg-color: #f9ffef;
     --main-text-color: #020202;
+    --sub-text-color: #5f7f5f;
+    --sub-sub-text-color: #a9a9a9;
+}
+* {
+    box-sizing: inherit;
+}
+html {
+    height: 100%;
+}
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* footer*/
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+header {
+    margin: 0;
+    padding: 0;
+}
+#pagename {
+    background-color: var(--main-color);
+    border-bottom: 1px solid black;
+}
+#header-img {
+    display: block;
+    margin: 0 auto 0;
+    padding: 2rem 0 0;
+}
+#pagename > h1 {
+    text-align: center;
+    margin: 0;
+    padding: 1rem 0;
+}
+#nav-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#nav-top > a {
+    display: block;
+    margin: 0;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: start;
+    border-bottom: 1px solid black;
+    text-decoration: none;
+    color: var(--sub-text-color);
+}
+#nav-top > a > p {
+    width: 3em;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+#nav-top > a:hover {
+    background-color: var(--main-bg-color);
+}
+main {
+    margin: 0 0 auto;
+}
+main > * {
+    margin: 0 1rem;
+}
+#pubdate {
+    color: var(--sub-sub-text-color);
+    font-size: 1rem;
+}
+#content > h1 {
+    border-bottom: 2px solid var(--sub-text-color);
+}
+footer {
+    background-color: var(--main-color);
+    padding: 2rem;
+}
+footer > p {
+    margin: 0 auto;
+    text-align: center;
 }

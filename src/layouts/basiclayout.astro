@@ -1,4 +1,5 @@
 ---
+import "@/styles/global.css";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 
@@ -21,13 +22,13 @@ const { title, description, pubDate, updDate } = Astro.props;
     </head>
     <body>
         <Header />
-        <div>
-            <slot />
-            <div>
-                {pubDate && <p>公開日 {pubDate.toLocaleDateString()}</p>}
+        <main>
+            <div id="pubdate">
+                {pubDate && <p>公開日 {pubDate?.toLocaleDateString()}</p>}
                 {updDate && <p>{updDate?.toLocaleDateString()} 更新</p>}
             </div>
-        </div>
+            <div id="content"><slot /></div>
+        </main>
         <Footer />
     </body>
 </html>
