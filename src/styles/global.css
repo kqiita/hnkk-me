@@ -33,6 +33,7 @@ header {
     border-bottom: 1px solid black;
 }
 #header-img {
+    image-rendering: pixelated;
     display: block;
     margin: 0 auto 0;
     padding: 2rem 0 0;
