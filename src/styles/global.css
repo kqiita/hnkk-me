@@ -24,6 +24,13 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
+body a {
+    text-decoration: none;
+    color: var(--main-text-color);
+}
+body a:visited {
+    color: var(--main-text-color);
+}
 header {
     margin: 0;
     padding: 0;
