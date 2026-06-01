@@ -18,8 +18,16 @@ const { title, description, pubDate, updDate } = Astro.props;
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content={description} />
-        <title>{title}</title>
-    </head>
+        <meta
+            property="og:image"
+            content="https:/hnkk.me/img/syahuneko-ver1-r225g234b205.png"
+        />
+        <meta property="og:description" content={description} />
+        <meta property="og:title" content={title} />
+        <link rel="icon" href="/img/syahuneko.min.png" type="image/x-icon" />
+        <title>{title}</title></head
+    >
+
     <body>
         <Header />
         <main>
