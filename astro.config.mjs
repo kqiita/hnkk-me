@@ -14,7 +14,7 @@ export default defineConfig({
   adapter: cloudflare(),
   markdown: {
     remarkPlugins: [
-      [remarkToc, { heading: "index" }],
+      [remarkToc, { heading: "目次" }],
       remarkDirective,
       directiveHandler,
     ],

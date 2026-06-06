@@ -6,7 +6,7 @@ updDate: "2026-05-01"
 draft: true
 ---
 
-# index
+# 目次
 
 # 見出し
 本文
