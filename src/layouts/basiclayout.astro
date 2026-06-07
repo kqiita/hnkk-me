@@ -31,6 +31,7 @@ const { title, description, pubDate, updDate } = Astro.props;
     <body>
         <Header />
         <main>
+            <div id="title"><h1>{title}</h1></div>
             <div id="pubdate">
                 {pubDate && <p>公開日 {pubDate?.toLocaleDateString()}</p>}
                 {updDate && <p>{updDate?.toLocaleDateString()} 更新</p>}
