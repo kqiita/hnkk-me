@@ -1,0 +1,21 @@
+---
+import type TOCNode from "@/lib/toc";
+interface Props {
+    items: TOCNode[];
+}
+const { items } = Astro.props;
+---
+
+<ul>
+    {
+        items.map((item: TOCNode) => (
+            <li>
+                <a href={`#${item.slug}`}>{item.text}</a>
+
+                {item.children.length > 0 && (
+                    <Astro.self items={item.children} />
+                )}
+            </li>
+        ))
+    }
+</ul>

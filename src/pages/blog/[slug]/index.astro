@@ -1,8 +1,11 @@
 ---
-import type { GetStaticPaths } from "astro";
+import type { GetStaticPaths, MarkdownHeading } from "astro";
+
 import { getCollection, render } from "astro:content";
 import Basiclayout from "@/layouts/basiclayout.astro";
-
+import TocList from "@/components/TocList.astro";
+import type TOCNode from "@/lib/toc";
+import { buildTOC } from "@/lib/toc";
 export const getStaticPaths = (async () => {
     const posts = await getCollection("blog");
     return posts.map((post) => ({
@@ -11,7 +14,9 @@ export const getStaticPaths = (async () => {
     }));
 }) satisfies GetStaticPaths;
 const { post } = Astro.props;
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
+
+const toc: TOCNode[] = buildTOC(headings);
 ---
 
 <Basiclayout
@@ -22,5 +27,6 @@ const { Content } = await render(post);
         post.data.description}
     pubDate={post.data.pubDate}
 >
+    <TocList items={toc} />
     <Content />
 </Basiclayout>
